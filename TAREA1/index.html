@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Beauty Salon</title>
+    <link rel="stylesheet" href="./styles.css">
+    </head>
+
+<body>  
+    <nav class="navbar">
+        <a href="#HOME">HOME </a>
+        <a href="#PROYECTOS">PROYECTOS </a>
+        <a href="#CONTACTO">CONTACTO</a>
+        <a href="#REVIEW">REVIEW </a>
+    </nav>
+
+    <header>
+        <h1>Beauty Salon</h1>
+        <img src="POLLO/BELLEZA.jpg" alt="Interior del salon de belleza Beauty Salon" width="700" height="300">
+    <p>Empresa dedicada al cuidado personal, estética y bienestar.</p>
+    <p><strong>Misión:</strong> Brindar servicios de belleza con calidad y profesionalismo.</p>
+    <p><strong>Visión:</strong> Ser un salón reconocido por su excelencia y atención al cliente.</p>
+</header>
+
+<nav class="container">
+    <a href="#proyectos">Proyectos</a> |
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<main class="container">
+
+<section id="proyectos">
+    <h2>Proyectos Destacados</h2>
+    <button id="cambiarColor">Cambiar color</button>
+
+
+    <div class="servicios">
+        <article class="servicio">
+            <h3>Maquillaje Profesional</h3>
+            <p>Servicio especializado para eventos sociales y profesionales.</p>
+            <img src= "POLLO/maquillista.png" alt="Servicio de maquillaje profesional para eventos" width="250" height="150">
+    
+        </article>
+
+        <article class="servicio">
+            <h3>Cuidado Capilar</h3>
+            <p>Tratamientos capilares para fortalecer y revitalizar el cabello.</p>
+            <img src="POLLO/capilar.jpg" alt="Tratamiento de cuidado capilar en salon de belleza" width="250" height="150">
+           
+        </article>
+
+        <article class="servicio">
+            <h3>Manicure y Pedicure</h3>
+            <p>Servicio completo de cuidado y estética de uñas.</p>
+            <img src="POLLO/uñas.jpg" alt="Servicio de manicure y pedicure" width="250" height="150">
+            
+        </article>
+    </div>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+
+    <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="correo">Correo electrónico:</label><br>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>Síguenos en redes sociales:</p>
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a> |
+    <a href="#">TikTok</a>
+
+    <p>© 2026 Beauty Salon. Todos los derechos reservados.</p>
+</footer>
+<script>
+    const boton = document.getElementById("cambiarColor");
+    const cajas = document.querySelectorAll(".servicio");
+
+    boton.addEventListener("click", function () {
+        cajas.forEach(function (caja) {
+            caja.classList.toggle("morado");
+        });
+    });
+</script>
+
+
+</body>
+</html>
